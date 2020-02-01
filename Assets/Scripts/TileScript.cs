@@ -8,7 +8,7 @@ public class TileScript : MonoBehaviour
     public Vector2 zeroPosition;
     public float diff;
     // Start is called before the first frame update
-    void Start()
+    void Awake()
     {
         transform.localPosition = new Vector2(gridPosition.x * diff + zeroPosition.x, gridPosition.y * diff + zeroPosition.y);
         transform.name = "Tile_"+gridPosition.x+"_"+gridPosition.y;

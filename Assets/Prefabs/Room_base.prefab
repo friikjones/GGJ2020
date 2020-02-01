@@ -218,6 +218,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5470149910522457942}
+  - component: {fileID: 6699360477875553232}
   m_Layer: 0
   m_Name: TileHolder
   m_TagString: Untagged
@@ -303,6 +304,24 @@ Transform:
   m_Father: {fileID: 980218663148195369}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &6699360477875553232
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7817007416165415020}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f49bd40f8faf8af4580822d13a9dd1be, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  materials:
+  - {fileID: 2100000, guid: 7238d2a14d7b98e489840f6c0510b46e, type: 2}
+  - {fileID: 2100000, guid: b278d27716ffc124cb2a074767a1b2e0, type: 2}
+  - {fileID: 2100000, guid: 0f0a012081fdd254ca58a80ce4c0b08c, type: 2}
+  - {fileID: 2100000, guid: 7131c1ab803134c46a148a5c2f6be37d, type: 2}
+  - {fileID: 2100000, guid: 7c730692b0c1be64f8d3663ec1fe110d, type: 2}
 --- !u!1001 &175782912365396546
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -4990,6 +5009,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Tile_base
       objectReference: {fileID: 0}
+    - target: {fileID: 9043233312291875481, guid: b25c270615948d544b7d2c3ac67725d7,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 7238d2a14d7b98e489840f6c0510b46e, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b25c270615948d544b7d2c3ac67725d7, type: 3}
 --- !u!4 &237424198824642410 stripped
