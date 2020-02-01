@@ -8,8 +8,9 @@ public class GameCamera : MonoBehaviour
 
     public Vector3 cameraOffset;
     public float roomTransitionDuration;
-    public float zoomedSize;
 
+    [HideInInspector]
+    public bool zoomed = false;
     [HideInInspector]
     public bool tweening = false;
 
@@ -20,16 +21,17 @@ public class GameCamera : MonoBehaviour
         originalPosition = transform.position;
     }
 
-    public void ZoomRoom(GameObject room){
-        tweening = false;
+    public void ZoomInRoom(GameObject room){
+        if (tweening || zoomed)
+            return;
+        tweening = true;
         Vector3 zoomPosition = room.transform.position + cameraOffset;
         transform.DOMove(zoomPosition, roomTransitionDuration);
-        //GetComponent<Camera>().DOOrthoSize(zoomedSize, roomTransitionDuration);
         //Disable button
-        StartCoroutine(ZoomRoomAsync(room.transform));
+        StartCoroutine(ZoomInRoomAsync(room.transform));
     }
 
-    IEnumerator ZoomRoomAsync(Transform target){
+    IEnumerator ZoomInRoomAsync(Transform target){
         float tweenToLookAtDuration = roomTransitionDuration/2;
         float timeCount = 0f;
         Quaternion originalRotation = target.rotation;
@@ -40,7 +42,31 @@ public class GameCamera : MonoBehaviour
             timeCount += Time.deltaTime;
             yield return null;
         }
+        tweening = false;
+        zoomed = true;
+    }
+
+    public void ZoomOutRoom(){
+        if (tweening || !zoomed)
+            return;
         tweening = true;
+        transform.DOMove(originalPosition, roomTransitionDuration);
+        StartCoroutine(ZoomOutRoomAsync());
+    }
+
+    IEnumerator ZoomOutRoomAsync(){
+        float tweenToLookAtDuration = roomTransitionDuration/2;
+        float timeCount = 0f;
+        Quaternion originalRotation = Quaternion.identity;
+        while(timeCount < roomTransitionDuration){
+            //transform.LookAt(target);
+            Quaternion lookAtRotation = Quaternion.LookRotation(Vector3.forward);
+            transform.rotation = Quaternion.Lerp(originalRotation, lookAtRotation, timeCount/tweenToLookAtDuration);
+            timeCount += Time.deltaTime;
+            yield return null;
+        }
+        tweening = false;
+        zoomed = false;
     }
 
 }

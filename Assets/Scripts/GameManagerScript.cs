@@ -18,7 +18,9 @@ public class GameManagerScript : MonoBehaviour
 
     IEnumerator StartAsync(){
         yield return new WaitForSeconds(3f);
-        mainCamera.ZoomRoom(GameObject.Find("/Map/RoomGrid/Room_0_0"));
+        mainCamera.ZoomInRoom(GameObject.Find("/Map/RoomGrid/Room_0_0"));
+        yield return new WaitForSeconds(3f);
+        mainCamera.ZoomOutRoom();
     }
 
     // Update is called once per frame
