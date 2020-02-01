@@ -27,17 +27,16 @@ public class GameCamera : MonoBehaviour
         tweening = true;
         Vector3 zoomPosition = room.transform.position + cameraOffset;
         transform.DOMove(zoomPosition, roomTransitionDuration);
-        //Disable button
         StartCoroutine(ZoomInRoomAsync(room.transform));
     }
 
     IEnumerator ZoomInRoomAsync(Transform target){
-        float tweenToLookAtDuration = roomTransitionDuration/2;
+        float tweenToLookAtDuration = roomTransitionDuration/2.5f;
         float timeCount = 0f;
         Quaternion originalRotation = target.rotation;
+        Quaternion lookAtRotation;
         while(timeCount < roomTransitionDuration){
-            //transform.LookAt(target);
-            Quaternion lookAtRotation = Quaternion.LookRotation(target.position-transform.position);
+            lookAtRotation = Quaternion.LookRotation(target.position - transform.position);
             transform.rotation = Quaternion.Lerp(originalRotation, lookAtRotation, timeCount/tweenToLookAtDuration);
             timeCount += Time.deltaTime;
             yield return null;
@@ -55,11 +54,10 @@ public class GameCamera : MonoBehaviour
     }
 
     IEnumerator ZoomOutRoomAsync(){
-        float tweenToLookAtDuration = roomTransitionDuration/2;
+        float tweenToLookAtDuration = roomTransitionDuration/3;
         float timeCount = 0f;
         Quaternion originalRotation = Quaternion.identity;
         while(timeCount < roomTransitionDuration){
-            //transform.LookAt(target);
             Quaternion lookAtRotation = Quaternion.LookRotation(Vector3.forward);
             transform.rotation = Quaternion.Lerp(originalRotation, lookAtRotation, timeCount/tweenToLookAtDuration);
             timeCount += Time.deltaTime;

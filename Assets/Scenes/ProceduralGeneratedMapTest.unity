@@ -1906,9 +1906,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 432b6129ed934004898d4cbcec9b6d6f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  cameraOffset: {x: -0.3, y: -0.3, z: -5.38}
+  cameraOffset: {x: 0, y: 0, z: -2.2}
   roomTransitionDuration: 1
-  zoomedSize: 1
+  zoomed: 0
   tweening: 0
 --- !u!4 &1503908063 stripped
 Transform:
