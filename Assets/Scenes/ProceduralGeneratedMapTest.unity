@@ -831,6 +831,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 58a42b0395516664d8d8cba399386bac, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  mainCamera: {fileID: 1432127828}
 --- !u!4 &239979350
 Transform:
   m_ObjectHideFlags: 0
@@ -1818,6 +1819,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1432127825}
+  - component: {fileID: 1432127828}
   - component: {fileID: 1432127827}
   - component: {fileID: 1432127826}
   m_Layer: 0
@@ -1875,7 +1877,7 @@ Camera:
   near clip plane: 0.3
   far clip plane: 1000
   field of view: 60
-  orthographic: 1
+  orthographic: 0
   orthographic size: 5
   m_Depth: 0
   m_CullingMask:
@@ -1892,6 +1894,22 @@ Camera:
   m_OcclusionCulling: 1
   m_StereoConvergence: 10
   m_StereoSeparation: 0.022
+--- !u!114 &1432127828
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1432127824}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 432b6129ed934004898d4cbcec9b6d6f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  cameraOffset: {x: -0.3, y: -0.3, z: -5.38}
+  roomTransitionDuration: 1
+  zoomedSize: 1
+  tweening: 0
 --- !u!4 &1503908063 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 980218663148195369, guid: 0cccdd64bb4715740906e60ced9f37be,

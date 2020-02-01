@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class GameManagerScript : MonoBehaviour
 {
+    public GameCamera mainCamera;
+
     public GameObject[,] lightBoard = new GameObject[4, 3];
     public GameObject[,] roomBoard = new GameObject[4,3];
     // Start is called before the first frame update
@@ -11,6 +13,12 @@ public class GameManagerScript : MonoBehaviour
     {
         FindLights();
         RandomLights();
+        StartCoroutine(StartAsync());
+    }
+
+    IEnumerator StartAsync(){
+        yield return new WaitForSeconds(3f);
+        mainCamera.ZoomRoom(GameObject.Find("/Map/RoomGrid/Room_0_0"));
     }
 
     // Update is called once per frame
