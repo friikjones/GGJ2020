@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 4534331656450300526}
   - component: {fileID: 5856432765602663178}
   - component: {fileID: 6512278437195019108}
-  - component: {fileID: 8907758801741720526}
+  - component: {fileID: 353764487774345380}
   m_Layer: 0
   m_Name: GenericMachine
   m_TagString: GenericMachine
@@ -106,7 +106,7 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!60 &8907758801741720526
+--- !u!60 &353764487774345380
 PolygonCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}

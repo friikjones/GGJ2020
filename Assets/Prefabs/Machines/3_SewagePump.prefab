@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 4605440494946934261}
   m_Layer: 0
   m_Name: 3_SewagePump
-  m_TagString: Untagged
+  m_TagString: SewagePump
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
