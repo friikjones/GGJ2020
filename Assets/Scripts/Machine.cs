@@ -29,6 +29,7 @@ public class Machine : MonoBehaviour
     void Start()
     {
         tools = this.GetComponent<ToolWheel>();
+        
         selectTool();
         hp = 95;
     }
@@ -81,7 +82,7 @@ public class Machine : MonoBehaviour
 
     void repair()
     {
-        if (tools.currentTool == requiredTool)
+        if (tools.currentTool == requiredTool && (_state == State.Damaged || _state == State.Dead))
         {
             hp += 5;
         }
