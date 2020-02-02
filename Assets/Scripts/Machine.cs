@@ -11,16 +11,21 @@ public class Machine : MonoBehaviour
 
     public float timerCount;
     public float hp;
+    public const float maxHp = 100f;
+    public const float minHp = 0f;
     public string requiredTool;
     public bool isActive;
     public bool isDead;
+    public bool isDormant;
     public int damageCounter;
+    public float dormantTimer;
 
     public enum State
     {
         Active,
         Damaged,
-        Dead
+        Dead,
+        Dormant
     }
 
     public State _state;
@@ -31,7 +36,10 @@ public class Machine : MonoBehaviour
         tools = this.GetComponent<ToolWheel>();
         
         selectTool();
+        dormantTimer = 25f;
         hp = 95;
+        _state = State.Dormant;
+        isDormant = true;
     }
 
     // Update is called once per frame
@@ -43,6 +51,7 @@ public class Machine : MonoBehaviour
     void FixedUpdate()
     {
         timerCount += Time.deltaTime;
+        dormantTimer -= Time.deltaTime;
         ray = Camera.main.ScreenPointToRay(Input.mousePosition);
 
         if (Physics.Raycast(ray, out hit))
@@ -53,6 +62,7 @@ public class Machine : MonoBehaviour
             }
         }
 
+        wakeUpMachine();
         doDamage();
         switchState();
     }
@@ -88,7 +98,7 @@ public class Machine : MonoBehaviour
         }
         else
         {
-            Debug.Log("wrong tool");
+            Debug.Log("wrong tool or already active");
         }
     }
 
@@ -106,23 +116,60 @@ public class Machine : MonoBehaviour
 
     void switchState()
     {
-        if (hp >= 100)
+        if (hp >= 100 && isDormant == false)
         {
             _state = State.Active;
+            hp = maxHp;
             isActive = true;
             isDead = false;
         }
-        else if (hp > 0 && hp < 100)
+        else if ((hp > 0 && hp < 100) && isDormant == false)
         {
             _state = State.Damaged;
             isActive = false;
             isDead = false;
+            setDamageCounter();
         }
-        else if (hp <= 0)
+        else if (hp <= 0 && isDormant == false)
         {
             _state = State.Dead;
+            hp = minHp;
             isDead = true;
             isActive = false;
+        }
+    }
+
+    void setDamageCounter()
+    {
+        if (hp > 80)
+        {
+            damageCounter = 1;
+        }
+        else if (hp > 60)
+        {
+            damageCounter = 2;
+        }
+        else if (hp > 40)
+        {
+            damageCounter = 3;
+        }
+        else if (hp > 20)
+        {
+            damageCounter = 4;
+        }
+        else
+        {
+            damageCounter = 5;
+        }
+    }
+
+    void wakeUpMachine()
+    {
+        float rnd = Random.Range(0f, 10f);
+        if (dormantTimer < rnd)
+        {
+            _state = State.Damaged;
+            isDormant = false;
         }
     }
 }
