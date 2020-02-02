@@ -5,7 +5,6 @@ using UnityEngine;
 public class GameManagerScript : MonoBehaviour
 {
     public GameCamera mainCamera;
-
     public GameObject[,] lightBoard = new GameObject[4, 3];
     public GameObject[,] roomBoard = new GameObject[4,3];
     // Start is called before the first frame update
