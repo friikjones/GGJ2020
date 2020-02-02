@@ -5,23 +5,30 @@ using UnityEngine;
 public class GameManagerScript : MonoBehaviour
 {
 
-    [HideInInspector]
     public static GameManagerScript instance;
 
     public GameCamera mainCamera;
     public GameObject[,] lightBoard = new GameObject[4, 3];
     public GameObject[,] roomBoard = new GameObject[4,3];
     public ExitButton exitButton;
+    public AudioClip clip;
 
+    [HideInInspector]
     public bool zoomed;
+    [HideInInspector]
     public GameObject openedRoom = null;
+
+
+    void Awake(){
+        instance = this;
+    }
 
     void Start()
     {
-        instance = this;
         FindLights();
         // RandomLights();
         FindRooms();
+        MusicController.Play(clip);
     }
 
     void Update()
@@ -32,9 +39,10 @@ public class GameManagerScript : MonoBehaviour
             Ray ray = mainCamera.GetComponent<Camera>().ScreenPointToRay(Input.mousePosition);
             if (Physics.Raycast(ray, out hit, 100f, LayerMask.GetMask("Room"))) {
                 openedRoom = hit.collider.transform.parent.gameObject;
-                mainCamera.ZoomInRoom(openedRoom);
-                exitButton.ShowAnim();
-                zoomed = true;
+                if(mainCamera.ZoomInRoom(openedRoom)){
+                    exitButton.ShowAnim();
+                    zoomed = true;
+                }
             }
         }
         if(zoomed && Input.GetKeyDown(KeyCode.RightShift)){
@@ -90,10 +98,11 @@ public class GameManagerScript : MonoBehaviour
     }
 
     public void ExitRoom(){
-        mainCamera.ZoomOutRoom();
-        exitButton.HideAnim();
-        openedRoom = null;
-        zoomed = false;
+        if(mainCamera.ZoomOutRoom()){
+            exitButton.HideAnim();
+            openedRoom = null;
+            zoomed = false;
+        }
     }
 
 }
