@@ -5,14 +5,20 @@ using UnityEngine;
 public class GameManagerScript : MonoBehaviour
 {
 
+    [HideInInspector]
+    public static GameManagerScript instance;
+
     public GameCamera mainCamera;
     public GameObject[,] lightBoard = new GameObject[4, 3];
     public GameObject[,] roomBoard = new GameObject[4,3];
+    public ExitButton exitButton;
 
     public bool zoomed;
+    public GameObject openedRoom = null;
 
     void Start()
     {
+        instance = this;
         FindLights();
         // RandomLights();
         FindRooms();
@@ -25,13 +31,14 @@ public class GameManagerScript : MonoBehaviour
             RaycastHit hit;
             Ray ray = mainCamera.GetComponent<Camera>().ScreenPointToRay(Input.mousePosition);
             if (Physics.Raycast(ray, out hit, 100f, LayerMask.GetMask("Room"))) {
-                mainCamera.ZoomInRoom(hit.collider.transform.parent.gameObject);
+                openedRoom = hit.collider.transform.parent.gameObject;
+                mainCamera.ZoomInRoom(openedRoom);
+                exitButton.ShowAnim();
                 zoomed = true;
             }
         }
         if(zoomed && Input.GetKeyDown(KeyCode.RightShift)){
-            mainCamera.ZoomOutRoom();
-            zoomed = false;
+            ExitRoom();
         }
 
         UpdateDanger();
@@ -56,6 +63,7 @@ public class GameManagerScript : MonoBehaviour
             {
                 string aux = "Minimap/Minimap Canvas/Lightbulb_" + i + "_" + j;
                 lightBoard[i, j] = GameObject.Find(aux);
+            }
         }
     }
 
@@ -80,4 +88,12 @@ public class GameManagerScript : MonoBehaviour
             }
         }
     }
+
+    public void ExitRoom(){
+        mainCamera.ZoomOutRoom();
+        exitButton.HideAnim();
+        openedRoom = null;
+        zoomed = false;
+    }
+
 }

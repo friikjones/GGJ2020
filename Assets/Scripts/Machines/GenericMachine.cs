@@ -37,7 +37,7 @@ public class GenericMachine : MonoBehaviour
     void Start()
     {
         //tools = GameObject.Find("/GameManager").GetComponent<ToolWheel>();
-        tools = this.GetComponent<ToolWheel>();
+        tools = GetComponent<ToolWheel>();
         
         setVariables(); 
     }
@@ -181,14 +181,19 @@ public class GenericMachine : MonoBehaviour
 
     void MouseCheck()
     {
-        ray = Camera.main.ScreenPointToRay(Input.mousePosition);
-        RaycastHit2D hit2D = Physics2D.GetRayIntersection ( ray );
+        if(GameManagerScript.instance.openedRoom != transform.parent.gameObject)
+            return;
+        
+        if (Input.GetMouseButton(0)){
+            ray = GameManagerScript.instance.mainCamera.GetComponent<Camera>().ScreenPointToRay(Input.mousePosition);
+            RaycastHit2D hit2D = Physics2D.GetRayIntersection ( ray );
 
-        if (hit2D.collider != null)
-        {
-            if (Input.GetMouseButton(0) && hit2D.collider.tag == this.tag)
-            {   
-                repair();
+            if (hit2D.collider != null)
+            {
+                if (hit2D.collider.tag == this.tag)
+                {   
+                    repair();
+                }
             }
         }
     }
