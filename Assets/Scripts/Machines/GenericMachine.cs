@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Machine : MonoBehaviour
+public class GenericMachine : MonoBehaviour
 {
     public ToolWheel tools;
 
@@ -19,6 +19,9 @@ public class Machine : MonoBehaviour
     public bool isDormant;
     public int damageCounter;
     public float dormantTimer;
+    public float fixCount;
+
+    public bool isFocused;
 
     public enum State
     {
@@ -33,7 +36,8 @@ public class Machine : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        tools = this.GetComponent<ToolWheel>();
+        //tools = GameObject.Find("/GameManager").GetComponent<ToolWheel>();
+        tools = GetComponent<ToolWheel>();
         
         setVariables(); 
     }
@@ -41,7 +45,7 @@ public class Machine : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+
     }
 
     void FixedUpdate()
@@ -62,6 +66,7 @@ public class Machine : MonoBehaviour
         hp = 95;
         _state = State.Dormant;
         isDormant = true;
+        isFocused = true;
     }
 
     void selectTool()
@@ -91,7 +96,8 @@ public class Machine : MonoBehaviour
     {
         if (tools.currentTool == requiredTool)
         {
-            hp += 5;
+            hp += 0.44f;
+            fixCount += Time.deltaTime;
         }
         else
         {
@@ -107,7 +113,7 @@ public class Machine : MonoBehaviour
             {
                 hp -= 2;
             }
-            timerCount = 0;
+           timerCount = 0;
         }
     }
 
@@ -124,7 +130,9 @@ public class Machine : MonoBehaviour
         else if ((hp > 0 && hp < 100) && isDormant == false)
         {
             _state = State.Damaged;
-            MouseCheck();
+            if(isFocused){
+                MouseCheck();
+            }
             isActive = false;
             isDead = false;
             setDamageCounter();
@@ -173,13 +181,19 @@ public class Machine : MonoBehaviour
 
     void MouseCheck()
     {
-        ray = Camera.main.ScreenPointToRay(Input.mousePosition);
+        if(GameManagerScript.instance.openedRoom != transform.parent.gameObject)
+            return;
+        
+        if (Input.GetMouseButton(0)){
+            ray = GameManagerScript.instance.mainCamera.GetComponent<Camera>().ScreenPointToRay(Input.mousePosition);
+            RaycastHit2D hit2D = Physics2D.GetRayIntersection ( ray );
 
-        if (Physics.Raycast(ray, out hit))
-        {
-            if (Input.GetMouseButtonUp(0))
+            if (hit2D.collider != null)
             {
-                repair();
+                if (hit2D.collider.tag == this.tag)
+                {   
+                    repair();
+                }
             }
         }
     }

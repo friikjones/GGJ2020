@@ -20,7 +20,6 @@ public class LightbulbScript : MonoBehaviour
     void Start()
     {
         spriteR = gameObject.GetComponent<SpriteRenderer>();
-        // transform.localPosition = new Vector3(gridPosition.x * diff + zeroPosition.x, gridPosition.y * diff + zeroPosition.y, 0);
         transform.name = "Lightbulb_" + gridPosition.x + "_" + gridPosition.y;
         timeCounter = Random.Range(.1f,1f);
     }
