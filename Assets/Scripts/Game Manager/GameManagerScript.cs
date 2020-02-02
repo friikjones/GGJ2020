@@ -5,15 +5,17 @@ using UnityEngine;
 public class GameManagerScript : MonoBehaviour
 {
 
-    [HideInInspector]
     public static GameManagerScript instance;
 
     public GameCamera mainCamera;
     public GameObject[,] lightBoard = new GameObject[4, 3];
     public GameObject[,] roomBoard = new GameObject[4,3];
     public ExitButton exitButton;
+    public AudioClip clip;
 
+    [HideInInspector]
     public bool zoomed;
+    [HideInInspector]
     public GameObject openedRoom = null;
 
 
@@ -26,6 +28,7 @@ public class GameManagerScript : MonoBehaviour
         FindLights();
         // RandomLights();
         FindRooms();
+        MusicController.Play(clip);
     }
 
     void Update()

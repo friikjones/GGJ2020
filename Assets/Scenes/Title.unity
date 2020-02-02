@@ -348,6 +348,7 @@ GameObject:
   - component: {fileID: 360485287}
   - component: {fileID: 360485286}
   - component: {fileID: 360485290}
+  - component: {fileID: 360485291}
   m_Layer: 5
   m_Name: Canvas
   m_TagString: Untagged
@@ -451,6 +452,19 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   sceneToLoad: ProceduralGeneratedMapTest
+--- !u!114 &360485291
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 360485285}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cb73a7a99d34ffc419716afc9b65eb71, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  clip: {fileID: 8300000, guid: 136c2b7ff51b56e4a95e82212e6a3423, type: 3}
 --- !u!1 &1025740861
 GameObject:
   m_ObjectHideFlags: 0
