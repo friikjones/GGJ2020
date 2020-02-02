@@ -36,7 +36,6 @@ public class GenericMachine : MonoBehaviour
     void Start()
     {
         tools = GameManagerScript.instance.gameObject.GetComponent<ToolWheel>();
-        //tools = GetComponent<ToolWheel>();
         
         setVariables(); 
     }
@@ -49,13 +48,14 @@ public class GenericMachine : MonoBehaviour
 
     void FixedUpdate()
     {
-        timerCount += Time.deltaTime;
-        dormantTimer -= Time.deltaTime;
-        
+        if(!IsFinished()){
+            timerCount += Time.deltaTime;
+            dormantTimer -= Time.deltaTime;
 
-        wakeUpMachine();
-        doDamage();
-        switchState();
+            wakeUpMachine();
+            doDamage();
+            switchState();
+        }
     }
 
     public void setVariables()
@@ -124,6 +124,7 @@ public class GenericMachine : MonoBehaviour
             damageCounter = 0;
             isActive = true;
             isDead = false;
+            GameManagerScript.instance.CheckEnd();
         }
         else if ((hp > 0 && hp < 100) && isDormant == false)
         {
@@ -141,6 +142,7 @@ public class GenericMachine : MonoBehaviour
             hp = minHp;
             isDead = true;
             isActive = false;
+            GameManagerScript.instance.CheckEnd();
         }
     }
 
@@ -194,5 +196,13 @@ public class GenericMachine : MonoBehaviour
                 }
             }
         }
+    }
+
+    public bool IsFinished(){
+        return _state == State.Dead || _state == State.Active;
+    }
+
+    public bool IsSaved(){
+        return _state == State.Active;
     }
 }
