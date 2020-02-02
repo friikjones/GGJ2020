@@ -48,15 +48,7 @@ public class Machine : MonoBehaviour
     {
         timerCount += Time.deltaTime;
         dormantTimer -= Time.deltaTime;
-        ray = Camera.main.ScreenPointToRay(Input.mousePosition);
-
-        if (Physics.Raycast(ray, out hit))
-        {
-            if (Input.GetMouseButtonUp(0))
-            {
-                repair();
-            }
-        }
+        
 
         wakeUpMachine();
         doDamage();
@@ -97,7 +89,7 @@ public class Machine : MonoBehaviour
 
     void repair()
     {
-        if (tools.currentTool == requiredTool && (_state == State.Damaged || _state == State.Dead))
+        if (tools.currentTool == requiredTool)
         {
             hp += 5;
         }
@@ -132,6 +124,7 @@ public class Machine : MonoBehaviour
         else if ((hp > 0 && hp < 100) && isDormant == false)
         {
             _state = State.Damaged;
+            MouseCheck();
             isActive = false;
             isDead = false;
             setDamageCounter();
@@ -175,6 +168,19 @@ public class Machine : MonoBehaviour
         {
             isDormant = false;
             dormantTimer = 0f;
+        }
+    }
+
+    void MouseCheck()
+    {
+        ray = Camera.main.ScreenPointToRay(Input.mousePosition);
+
+        if (Physics.Raycast(ray, out hit))
+        {
+            if (Input.GetMouseButtonUp(0))
+            {
+                repair();
+            }
         }
     }
 }
