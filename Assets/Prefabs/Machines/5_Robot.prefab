@@ -9,9 +9,9 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4534331656450300526}
-  - component: {fileID: 5856432765602663178}
   - component: {fileID: 6978997893252809969}
   - component: {fileID: 3031578500055126128}
+  - component: {fileID: 8452912705929548278}
   m_Layer: 0
   m_Name: 5_Robot
   m_TagString: Robot
@@ -33,29 +33,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &5856432765602663178
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4534331656450300522}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6638cf3d6d4134c4183184251742d5b6, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  tools: {fileID: 0}
-  timerCount: 0
-  hp: 0
-  requiredTool: 
-  isActive: 0
-  isDead: 0
-  isDormant: 0
-  damageCounter: 0
-  dormantTimer: 0
-  isFocused: 0
-  _state: 0
 --- !u!212 &6978997893252809969
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -134,3 +111,29 @@ PolygonCollider2D:
       - {x: -0.645, y: -0.935}
       - {x: 0.645, y: -0.935}
       - {x: 0.645, y: 0.935}
+--- !u!114 &8452912705929548278
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4534331656450300522}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f7d775f61daf7eb42a921b6cd4cbfe61, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  tools: {fileID: 0}
+  timerCount: 0
+  hp: 0
+  requiredTool: 
+  isActive: 0
+  isDead: 0
+  isDormant: 0
+  damageCounter: 0
+  dormantTimer: 0
+  isFocused: 0
+  _state: 0
+  gameManager: {fileID: 0}
+  roomSetup: {fileID: 0}
+  colateralDone: 0

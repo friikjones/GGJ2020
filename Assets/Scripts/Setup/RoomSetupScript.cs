@@ -17,6 +17,8 @@ public class RoomSetupScript : MonoBehaviour
 
     public GameObject[] machines;
     public GameObject machineInstance;
+    public float diffX = .2f;
+    public float diffY = .2f;
 
     // Start is called before the first frame update
     void Start()
@@ -48,6 +50,11 @@ public class RoomSetupScript : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+
+        if (machineInstance.tag == "Robot")
+        {
+            machineInstance.transform.localPosition = new Vector3(gridPosition.x*diffX,gridPosition.y*diffY,-.1f);
+        }
         if(failed){
             overlayRenderer.material = overlayMat[1];
             overlayRenderer.enabled = true;
