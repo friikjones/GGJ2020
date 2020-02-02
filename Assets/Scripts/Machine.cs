@@ -19,6 +19,7 @@ public class Machine : MonoBehaviour
     public bool isDormant;
     public int damageCounter;
     public float dormantTimer;
+    public float wakeUpTime;
 
     public enum State
     {
@@ -35,11 +36,7 @@ public class Machine : MonoBehaviour
     {
         tools = this.GetComponent<ToolWheel>();
         
-        selectTool();
-        dormantTimer = 25f;
-        hp = 95;
-        _state = State.Dormant;
-        isDormant = true;
+        setVariables(); 
     }
 
     // Update is called once per frame
@@ -65,6 +62,16 @@ public class Machine : MonoBehaviour
         wakeUpMachine();
         doDamage();
         switchState();
+    }
+
+    void setVariables()
+    {
+        selectTool();
+        wakeUpTime = Random.Range(0f, 10f);
+        dormantTimer = 25f;
+        hp = 95;
+        _state = State.Dormant;
+        isDormant = true;
     }
 
     void selectTool()
@@ -98,7 +105,7 @@ public class Machine : MonoBehaviour
         }
         else
         {
-            Debug.Log("wrong tool or already active");
+            Debug.Log("wrong tool, active or dormant");
         }
     }
 
@@ -165,8 +172,7 @@ public class Machine : MonoBehaviour
 
     void wakeUpMachine()
     {
-        float rnd = Random.Range(0f, 10f);
-        if (dormantTimer < rnd)
+        if (dormantTimer < wakeUpTime)
         {
             _state = State.Damaged;
             isDormant = false;
