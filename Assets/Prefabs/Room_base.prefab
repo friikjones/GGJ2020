@@ -53,6 +53,7 @@ MonoBehaviour:
   - {fileID: 2100000, guid: 572f0632c8adecc4dac991a451d324c9, type: 2}
   completed: 0
   failed: 0
+  machine: {fileID: 4534331656450300522, guid: f28f3aa5f73bd08449b76266fecc82cb, type: 3}
 --- !u!1 &3640883978549665167
 GameObject:
   m_ObjectHideFlags: 0
@@ -322,6 +323,7 @@ MonoBehaviour:
   - {fileID: 2100000, guid: 0f0a012081fdd254ca58a80ce4c0b08c, type: 2}
   - {fileID: 2100000, guid: 7131c1ab803134c46a148a5c2f6be37d, type: 2}
   - {fileID: 2100000, guid: 7c730692b0c1be64f8d3663ec1fe110d, type: 2}
+  test: {fileID: 0}
 --- !u!1001 &175782912365396546
 PrefabInstance:
   m_ObjectHideFlags: 0

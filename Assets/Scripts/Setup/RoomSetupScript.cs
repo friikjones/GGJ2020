@@ -15,12 +15,18 @@ public class RoomSetupScript : MonoBehaviour
     public bool completed;
     public bool failed;
 
+    public GameObject machine;
+    public GameObject machineInstance;
+
     // Start is called before the first frame update
     void Start()
     {
         // transform.localPosition = new Vector3(gridPosition.x * diff.x + zeroPosition.x, gridPosition.y * diff.y + zeroPosition.y, 0);
         transform.name = "Room_" + gridPosition.x + "_" + gridPosition.y;
         overlayRenderer = transform.Find("Overlay").GetComponent<Renderer>();
+        machineInstance = Instantiate(machine,Vector3.zero,Quaternion.identity);
+        machineInstance.transform.parent = this.transform;
+        machineInstance.transform.localPosition = Vector3.zero;
     }
 
     // Update is called once per frame

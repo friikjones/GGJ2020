@@ -3121,5 +3121,11 @@ PrefabInstance:
       propertyPath: diff.y
       value: 3
       objectReference: {fileID: 0}
+    - target: {fileID: 4743116428293366166, guid: 0cccdd64bb4715740906e60ced9f37be,
+        type: 3}
+      propertyPath: machine
+      value: 
+      objectReference: {fileID: 4534331656450300522, guid: f28f3aa5f73bd08449b76266fecc82cb,
+        type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0cccdd64bb4715740906e60ced9f37be, type: 3}

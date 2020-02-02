@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Machine : MonoBehaviour
+public class GenericMachine : MonoBehaviour
 {
     public ToolWheel tools;
 

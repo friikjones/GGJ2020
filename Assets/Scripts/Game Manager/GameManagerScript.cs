@@ -12,7 +12,7 @@ public class GameManagerScript : MonoBehaviour
     {
         FindLights();
         RandomLights();
-        StartCoroutine(StartAsync());
+        //StartCoroutine(StartAsync());
     }
 
     IEnumerator StartAsync(){
@@ -47,7 +47,7 @@ public class GameManagerScript : MonoBehaviour
             {
                 string aux = "Minimap/Minimap Canvas/Lightbulb_" + i + "_" + j;
                 lightBoard[i, j] = GameObject.Find(aux);
-                Debug.Log("@" + i + "," + j + ", found: " + lightBoard[i, j].name);
+                // Debug.Log("@" + i + "," + j + ", found: " + lightBoard[i, j].name);
             }
         }
     }
@@ -60,7 +60,7 @@ public class GameManagerScript : MonoBehaviour
             {
                 string aux = "Minimap/Minimap Canvas/Room_" + i + "_" + j;
                 roomBoard[i, j] = GameObject.Find(aux);
-                Debug.Log("@" + i + "," + j + ", found: " + roomBoard[i, j].name);
+                // Debug.Log("@" + i + "," + j + ", found: " + roomBoard[i, j].name);
             }
         }
     }
