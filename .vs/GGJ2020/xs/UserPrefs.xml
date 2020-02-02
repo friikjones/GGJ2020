@@ -1,0 +1,21 @@
+﻿<Properties StartupConfiguration="{7948CDE9-7EEB-0D85-E1DD-A8E2E4462493}|">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/ConfigPanel.cs">
+    <Files>
+      <File FileName="Assets/Scripts/ConfigPanel.cs" Line="22" Column="6" />
+    </Files>
+    <Pads>
+      <Pad Id="ProjectPad">
+        <State name="__root__">
+          <Node name="GGJ2020" expanded="True" selected="True" />
+        </State>
+      </Pad>
+    </Pads>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.ItemProperties.Assembly-CSharp PreferredExecutionTarget="418d20b3-1068-4021-8f8c-67fc45d3700f" />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MultiItemStartupConfigurations />
+</Properties>
