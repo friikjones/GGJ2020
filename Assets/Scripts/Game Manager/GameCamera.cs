@@ -24,13 +24,14 @@ public class GameCamera : MonoBehaviour
         tweenToLookAtDuration = 2*roomTransitionDuration/3;
     }
 
-    public void ZoomInRoom(GameObject room){
+    public bool ZoomInRoom(GameObject room){
         if (tweening || zoomed)
-            return;
+            return false;
         tweening = true;
         Vector3 zoomPosition = room.transform.position + cameraOffset;
         transform.DOMove(zoomPosition, roomTransitionDuration);
         StartCoroutine(ZoomInRoomAsync(room.transform));
+        return true;
     }
 
     IEnumerator ZoomInRoomAsync(Transform target){
@@ -47,12 +48,13 @@ public class GameCamera : MonoBehaviour
         zoomed = true;
     }
 
-    public void ZoomOutRoom(){
+    public bool ZoomOutRoom(){
         if (tweening || !zoomed)
-            return;
+            return false;
         tweening = true;
         transform.DOMove(originalPosition, roomTransitionDuration);
         StartCoroutine(ZoomOutRoomAsync());
+        return true;
     }
 
     IEnumerator ZoomOutRoomAsync(){

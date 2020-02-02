@@ -36,8 +36,8 @@ public class GenericMachine : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        //tools = GameObject.Find("/GameManager").GetComponent<ToolWheel>();
-        tools = GetComponent<ToolWheel>();
+        tools = GameManagerScript.instance.gameObject.GetComponent<ToolWheel>();
+        //tools = GetComponent<ToolWheel>();
         
         setVariables(); 
     }
