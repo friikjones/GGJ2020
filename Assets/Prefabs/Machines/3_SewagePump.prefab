@@ -9,9 +9,9 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4534331656450300526}
-  - component: {fileID: 5856432765602663178}
   - component: {fileID: 7889604291159251967}
   - component: {fileID: 4605440494946934261}
+  - component: {fileID: 1454855594738429823}
   m_Layer: 0
   m_Name: 3_SewagePump
   m_TagString: SewagePump
@@ -33,29 +33,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &5856432765602663178
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4534331656450300522}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6638cf3d6d4134c4183184251742d5b6, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  tools: {fileID: 0}
-  timerCount: 0
-  hp: 0
-  requiredTool: 
-  isActive: 0
-  isDead: 0
-  isDormant: 0
-  damageCounter: 0
-  dormantTimer: 0
-  isFocused: 0
-  _state: 0
 --- !u!212 &7889604291159251967
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -134,3 +111,27 @@ PolygonCollider2D:
       - {x: -1.35, y: -1.0649999}
       - {x: 1.35, y: -1.0649999}
       - {x: 1.35, y: 1.0649999}
+--- !u!114 &1454855594738429823
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4534331656450300522}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f7d775f61daf7eb42a921b6cd4cbfe61, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  tools: {fileID: 0}
+  timerCount: 0
+  hp: 0
+  requiredTool: 
+  isActive: 0
+  isDead: 0
+  isDormant: 0
+  damageCounter: 0
+  dormantTimer: 0
+  isFocused: 0
+  _state: 0
+  gameManager: {fileID: 0}

@@ -19,7 +19,6 @@ public class GenericMachine : MonoBehaviour
     public bool isDormant;
     public int damageCounter;
     public float dormantTimer;
-    public float fixCount;
 
     public bool isFocused;
 
@@ -59,17 +58,17 @@ public class GenericMachine : MonoBehaviour
         switchState();
     }
 
-    void setVariables()
+    public void setVariables()
     {
         selectTool();
         dormantTimer = 10f;
         hp = 95;
         _state = State.Dormant;
         isDormant = true;
-        isFocused = true;
+        isFocused = false;
     }
 
-    void selectTool()
+    public void selectTool()
     {
         int rnd = Random.Range(0,4);
         switch(rnd)
@@ -92,12 +91,11 @@ public class GenericMachine : MonoBehaviour
         }
     }
 
-    void repair()
+    public void repair()
     {
         if (tools.currentTool == requiredTool)
         {
             hp += 0.44f;
-            fixCount += Time.deltaTime;
         }
         else
         {
@@ -105,7 +103,7 @@ public class GenericMachine : MonoBehaviour
         }
     }
 
-    void doDamage()
+    public void doDamage()
     {
         if (timerCount > 1f)
         {
@@ -117,7 +115,7 @@ public class GenericMachine : MonoBehaviour
         }
     }
 
-    void switchState()
+    public void switchState()
     {
         if (hp >= 100 && isDormant == false)
         {
@@ -146,7 +144,7 @@ public class GenericMachine : MonoBehaviour
         }
     }
 
-    void setDamageCounter()
+    public void setDamageCounter()
     {
         if (hp > 80)
         {
@@ -170,7 +168,7 @@ public class GenericMachine : MonoBehaviour
         }
     }
 
-    void wakeUpMachine()
+    public void wakeUpMachine()
     {
         if (dormantTimer <= 0)
         {
@@ -179,7 +177,7 @@ public class GenericMachine : MonoBehaviour
         }
     }
 
-    void MouseCheck()
+    public void MouseCheck()
     {
         if(GameManagerScript.instance.openedRoom != transform.parent.gameObject)
             return;
