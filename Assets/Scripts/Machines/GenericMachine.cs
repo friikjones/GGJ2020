@@ -62,8 +62,8 @@ public class GenericMachine : MonoBehaviour
     void setVariables()
     {
         selectTool();
-        dormantTimer = 5f;
-        hp = 9;
+        dormantTimer = 10f;
+        hp = 95;
         _state = State.Dormant;
         isDormant = true;
         isFocused = true;
