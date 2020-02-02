@@ -4,28 +4,27 @@ using UnityEngine;
 
 public class GameManagerScript : MonoBehaviour
 {
+
     public GameCamera mainCamera;
     public GameObject[,] lightBoard = new GameObject[4, 3];
     public GameObject[,] roomBoard = new GameObject[4,3];
-    // Start is called before the first frame update
+
     void Start()
     {
         FindLights();
         RandomLights();
-        //StartCoroutine(StartAsync());
     }
 
-    IEnumerator StartAsync(){
-        yield return new WaitForSeconds(3f);
-        mainCamera.ZoomInRoom(GameObject.Find("/Map/RoomGrid/Room_0_0"));
-        yield return new WaitForSeconds(3f);
-        mainCamera.ZoomOutRoom();
-    }
-
-    // Update is called once per frame
     void Update()
     {
-
+        // Detect any clicked room.
+        if (Input.GetMouseButtonDown(0)) {
+            RaycastHit hit;
+            Ray ray = mainCamera.GetComponent<Camera>().ScreenPointToRay(Input.mousePosition);
+            if (Physics.Raycast(ray, out hit, 100f, LayerMask.GetMask("Room"))) {
+                mainCamera.ZoomInRoom(hit.collider.transform.parent.gameObject);
+            }
+        }
     }
 
     void RandomLights()
@@ -34,7 +33,7 @@ public class GameManagerScript : MonoBehaviour
         {
             for (int j = 0; j < lightBoard.GetLength(1); j++)
             {
-                lightBoard[i, j].GetComponent<LightbulbScript>().dangerState = Random.Range(0, 6);
+  //              lightBoard[i, j].GetComponent<LightbulbScript>().dangerState = Random.Range(0, 6);
             }
         }
     }
@@ -47,7 +46,11 @@ public class GameManagerScript : MonoBehaviour
             {
                 string aux = "Minimap/Minimap Canvas/Lightbulb_" + i + "_" + j;
                 lightBoard[i, j] = GameObject.Find(aux);
+<<<<<<< HEAD:Assets/Scripts/Game Manager/GameManagerScript.cs
                 // Debug.Log("@" + i + "," + j + ", found: " + lightBoard[i, j].name);
+=======
+//                Debug.Log("@" + i + "," + j + ", found: " + lightBoard[i, j].name);
+>>>>>>> Add click behaviour to zoom into rooms:Assets/Scripts/GameManagerScript.cs
             }
         }
     }

@@ -10,6 +10,8 @@ public class GameCamera : MonoBehaviour
     public float roomTransitionDuration;
 
     [HideInInspector]
+    float tweenToLookAtDuration;
+    [HideInInspector]
     public bool zoomed = false;
     [HideInInspector]
     public bool tweening = false;
@@ -19,6 +21,7 @@ public class GameCamera : MonoBehaviour
     void Start()
     {
         originalPosition = transform.position;
+        tweenToLookAtDuration = 2*roomTransitionDuration/3;
     }
 
     public void ZoomInRoom(GameObject room){
@@ -31,7 +34,6 @@ public class GameCamera : MonoBehaviour
     }
 
     IEnumerator ZoomInRoomAsync(Transform target){
-        float tweenToLookAtDuration = roomTransitionDuration/2.5f;
         float timeCount = 0f;
         Quaternion originalRotation = target.rotation;
         Quaternion lookAtRotation;
@@ -54,7 +56,6 @@ public class GameCamera : MonoBehaviour
     }
 
     IEnumerator ZoomOutRoomAsync(){
-        float tweenToLookAtDuration = roomTransitionDuration/3;
         float timeCount = 0f;
         Quaternion originalRotation = Quaternion.identity;
         while(timeCount < roomTransitionDuration){
