@@ -41,8 +41,8 @@ public class RoomSetupScript : MonoBehaviour
             machineInstance = Instantiate(machines[6],Vector3.zero,Quaternion.identity);
         }
         machineInstance.transform.parent = this.transform;
-        machineInstance.transform.localPosition = Vector3.zero;
-        machineInstance.GetComponent<GenericMachine>().isFocused = true;
+        machineInstance.transform.localPosition = new Vector3(0,0,-.1f);
+        // machineInstance.GetComponent<GenericMachine>().isFocused = true;
     }
 
     // Update is called once per frame

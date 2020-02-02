@@ -178,11 +178,12 @@ public class GenericMachine : MonoBehaviour
     void MouseCheck()
     {
         ray = Camera.main.ScreenPointToRay(Input.mousePosition);
+        RaycastHit2D hit2D = Physics2D.GetRayIntersection ( ray );
 
-        if (Physics.Raycast(ray, out hit))
+        if (hit2D.collider != null)
         {
-            if (Input.GetMouseButtonUp(0))
-            {
+            if (Input.GetMouseButton(0) && hit2D.collider.tag == this.tag)
+            {   
                 repair();
             }
         }

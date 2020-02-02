@@ -3,7 +3,15 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 2
-  tags: []
+  tags:
+  - Undefined
+  - GenericMachine
+  - WaterPump
+  - ElevatorControl
+  - CCTV
+  - Generator
+  - SewagePump
+  - Robot
   layers:
   - Default
   - TransparentFX

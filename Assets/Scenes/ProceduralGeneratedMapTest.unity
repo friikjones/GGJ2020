@@ -969,7 +969,7 @@ GameObject:
   - component: {fileID: 550363202}
   - component: {fileID: 550363203}
   - component: {fileID: 550363204}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: Tool Icon
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1940,7 +1940,7 @@ GameObject:
   - component: {fileID: 1432127826}
   m_Layer: 0
   m_Name: Main Camera
-  m_TagString: Untagged
+  m_TagString: MainCamera
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
