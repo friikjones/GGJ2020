@@ -53,14 +53,16 @@ public class UniqueMachine : GenericMachine
             {
                 colateralDone = true;
                 int targetX = Random.Range(0,3);
-                int targetY = Random.Range(0,2);
-                float targetMachineHp = gameManager.roomBoard[targetX,targetY].GetComponentInChildren<GenericMachine>().hp; 
+                int targetY = Random.Range(0,2); 
                 gameManager.roomBoard[targetX,targetY].GetComponentInChildren<GenericMachine>().hp -= 50;
-                targetMachineHp = gameManager.roomBoard[targetX,targetY].GetComponentInChildren<GenericMachine>().hp;
             }
             else if (this.tag == "WaterPump")
             {
                 colateralDone = true;   
+                gameManager.roomBoard[0,1].GetComponentInChildren<GenericMachine>().hp -= 25;
+                gameManager.roomBoard[1,2].GetComponentInChildren<GenericMachine>().hp -= 25;
+                gameManager.roomBoard[2,1].GetComponentInChildren<GenericMachine>().hp -= 25;
+                gameManager.roomBoard[1,0].GetComponentInChildren<GenericMachine>().hp -= 25;
             }
         }
     }
