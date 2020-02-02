@@ -19,6 +19,7 @@ public class GenericMachine : MonoBehaviour
     public bool isDormant;
     public int damageCounter;
     public float dormantTimer;
+    public float fixCount;
 
     public bool isFocused;
 
@@ -35,7 +36,8 @@ public class GenericMachine : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        tools = GameObject.Find("/GameManager").GetComponent<ToolWheel>();
+        //tools = GameObject.Find("/GameManager").GetComponent<ToolWheel>();
+        tools = this.GetComponent<ToolWheel>();
         
         setVariables(); 
     }
@@ -43,7 +45,7 @@ public class GenericMachine : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+
     }
 
     void FixedUpdate()
@@ -60,10 +62,11 @@ public class GenericMachine : MonoBehaviour
     void setVariables()
     {
         selectTool();
-        dormantTimer = 10f;
-        hp = 95;
+        dormantTimer = 5f;
+        hp = 9;
         _state = State.Dormant;
         isDormant = true;
+        isFocused = true;
     }
 
     void selectTool()
@@ -93,7 +96,8 @@ public class GenericMachine : MonoBehaviour
     {
         if (tools.currentTool == requiredTool)
         {
-            hp += 5;
+            hp += 0.44f;
+            fixCount += Time.deltaTime;
         }
         else
         {
@@ -109,7 +113,7 @@ public class GenericMachine : MonoBehaviour
             {
                 hp -= 2;
             }
-            timerCount = 0;
+           timerCount = 0;
         }
     }
 
@@ -181,7 +185,7 @@ public class GenericMachine : MonoBehaviour
 
         if (Physics.Raycast(ray, out hit))
         {
-            if (Input.GetMouseButtonUp(0))
+            if (Input.GetMouseButton(0))
             {
                 repair();
             }

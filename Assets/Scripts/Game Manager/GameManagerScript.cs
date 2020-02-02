@@ -46,12 +46,7 @@ public class GameManagerScript : MonoBehaviour
             {
                 string aux = "Minimap/Minimap Canvas/Lightbulb_" + i + "_" + j;
                 lightBoard[i, j] = GameObject.Find(aux);
-<<<<<<< HEAD:Assets/Scripts/Game Manager/GameManagerScript.cs
-                // Debug.Log("@" + i + "," + j + ", found: " + lightBoard[i, j].name);
-=======
-//                Debug.Log("@" + i + "," + j + ", found: " + lightBoard[i, j].name);
->>>>>>> Add click behaviour to zoom into rooms:Assets/Scripts/GameManagerScript.cs
-            }
+                }
         }
     }
 
