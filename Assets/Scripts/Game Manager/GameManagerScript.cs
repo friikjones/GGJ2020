@@ -56,7 +56,6 @@ public class GameManagerScript : MonoBehaviour
             {
                 string aux = "Minimap/Minimap Canvas/Lightbulb_" + i + "_" + j;
                 lightBoard[i, j] = GameObject.Find(aux);
-            }
         }
     }
 
