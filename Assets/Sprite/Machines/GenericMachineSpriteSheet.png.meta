@@ -1,0 +1,643 @@
+fileFormatVersion: 2
+guid: 80beaf840abe8bd47a1769363149d75b
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -5821502821743093695
+    second: GenericMachineSpriteSheet_0
+  - first:
+      213: 8818741207832890265
+    second: GenericMachineSpriteSheet_1
+  - first:
+      213: -8487120424969105445
+    second: GenericMachineSpriteSheet_2
+  - first:
+      213: 271740096680474699
+    second: GenericMachineSpriteSheet_3
+  - first:
+      213: 6214519658021816374
+    second: GenericMachineSpriteSheet_4
+  - first:
+      213: 257328178250972518
+    second: GenericMachineSpriteSheet_5
+  - first:
+      213: -8427033924737312389
+    second: GenericMachineSpriteSheet_6
+  - first:
+      213: 173956713664078271
+    second: GenericMachineSpriteSheet_7
+  - first:
+      213: 4449592913213342858
+    second: GenericMachineSpriteSheet_8
+  - first:
+      213: -2963686081565127228
+    second: GenericMachineSpriteSheet_9
+  - first:
+      213: 7275196542710010488
+    second: GenericMachineSpriteSheet_10
+  - first:
+      213: 1952942592542881755
+    second: GenericMachineSpriteSheet_11
+  - first:
+      213: -2298811500058769672
+    second: GenericMachineSpriteSheet_12
+  - first:
+      213: 8863431129638443149
+    second: GenericMachineSpriteSheet_13
+  - first:
+      213: 1364940329435001478
+    second: GenericMachineSpriteSheet_14
+  - first:
+      213: 2109856927285843419
+    second: GenericMachineSpriteSheet_15
+  - first:
+      213: 5222528268694130577
+    second: GenericMachineSpriteSheet_16
+  - first:
+      213: 6376507561699024860
+    second: GenericMachineSpriteSheet_17
+  - first:
+      213: -2863300723612390747
+    second: GenericMachineSpriteSheet_18
+  - first:
+      213: 440056347362280607
+    second: GenericMachineSpriteSheet_19
+  - first:
+      213: -3985928460641058367
+    second: GenericMachineSpriteSheet_20
+  externalObjects: {}
+  serializedVersion: 10
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: -1
+    aniso: -1
+    mipBias: -100
+    wrapU: 1
+    wrapV: 1
+    wrapW: -1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 200
+  spriteBorder: {x: 0, y: 1212, z: 2606, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: iPhone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: GenericMachineSpriteSheet_0
+      rect:
+        serializedVersion: 2
+        x: 46
+        y: 1255
+        width: 439
+        height: 345
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cae44045670346d4881440828a5f76ae
+      internalID: -5821502821743093695
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GenericMachineSpriteSheet_1
+      rect:
+        serializedVersion: 2
+        x: 565
+        y: 1253
+        width: 443
+        height: 348
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c13446e6d0f6fc448988b174d875633a
+      internalID: 8818741207832890265
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GenericMachineSpriteSheet_2
+      rect:
+        serializedVersion: 2
+        x: 1079
+        y: 1253
+        width: 448
+        height: 345
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5581d2a420b8d8149b7b1d59ff74b89f
+      internalID: -8487120424969105445
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GenericMachineSpriteSheet_3
+      rect:
+        serializedVersion: 2
+        x: 1593
+        y: 1253
+        width: 454
+        height: 348
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a9245c9658cf03d438ced21b1fc2b95a
+      internalID: 271740096680474699
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GenericMachineSpriteSheet_4
+      rect:
+        serializedVersion: 2
+        x: 2118
+        y: 1253
+        width: 450
+        height: 348
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9eac84d9e081e6d4289549c2e46af52e
+      internalID: 6214519658021816374
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GenericMachineSpriteSheet_5
+      rect:
+        serializedVersion: 2
+        x: 2645
+        y: 1253
+        width: 445
+        height: 344
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 35bd73cdbb87e8d4da7584e935a582bd
+      internalID: 257328178250972518
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GenericMachineSpriteSheet_6
+      rect:
+        serializedVersion: 2
+        x: 44
+        y: 844
+        width: 441
+        height: 346
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8b4908c217035b5428c7998b5084a7e7
+      internalID: -8427033924737312389
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GenericMachineSpriteSheet_7
+      rect:
+        serializedVersion: 2
+        x: 566
+        y: 844
+        width: 441
+        height: 345
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0fdd224748c3de347881a0a658231190
+      internalID: 173956713664078271
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GenericMachineSpriteSheet_8
+      rect:
+        serializedVersion: 2
+        x: 1082
+        y: 844
+        width: 445
+        height: 348
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b52554a17604bf34f914d7ce0c1f2fcd
+      internalID: 4449592913213342858
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GenericMachineSpriteSheet_9
+      rect:
+        serializedVersion: 2
+        x: 1596
+        y: 844
+        width: 449
+        height: 345
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5bdac0150817cbe47ac4f4397158391e
+      internalID: -2963686081565127228
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GenericMachineSpriteSheet_10
+      rect:
+        serializedVersion: 2
+        x: 2115
+        y: 844
+        width: 453
+        height: 345
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 85a8fd243ed51754c900b6472eee7ea6
+      internalID: 7275196542710010488
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GenericMachineSpriteSheet_11
+      rect:
+        serializedVersion: 2
+        x: 2639
+        y: 844
+        width: 450
+        height: 346
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cffca94416d01254b98754e87f35e494
+      internalID: 1952942592542881755
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GenericMachineSpriteSheet_12
+      rect:
+        serializedVersion: 2
+        x: 42
+        y: 435
+        width: 446
+        height: 344
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a7dd00ccdf28480459e917fde8525c95
+      internalID: -2298811500058769672
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GenericMachineSpriteSheet_13
+      rect:
+        serializedVersion: 2
+        x: 568
+        y: 435
+        width: 441
+        height: 345
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ceedaf342782b284d9cf7f8cd7c36d33
+      internalID: 8863431129638443149
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GenericMachineSpriteSheet_14
+      rect:
+        serializedVersion: 2
+        x: 1085
+        y: 435
+        width: 442
+        height: 345
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 02761b9e160043946bbf9c7d01ac49a6
+      internalID: 1364940329435001478
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GenericMachineSpriteSheet_15
+      rect:
+        serializedVersion: 2
+        x: 1602
+        y: 435
+        width: 446
+        height: 348
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cdc9d5c66732bef49aebae1dbc5878f4
+      internalID: 2109856927285843419
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GenericMachineSpriteSheet_16
+      rect:
+        serializedVersion: 2
+        x: 2120
+        y: 435
+        width: 449
+        height: 342
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e9afdd9db41a29445af49874674328d9
+      internalID: 5222528268694130577
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GenericMachineSpriteSheet_17
+      rect:
+        serializedVersion: 2
+        x: 2633
+        y: 435
+        width: 454
+        height: 345
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 01f38b62f5ce0bf4aa30ae4ac0ea1c2d
+      internalID: 6376507561699024860
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GenericMachineSpriteSheet_18
+      rect:
+        serializedVersion: 2
+        x: 40
+        y: 27
+        width: 448
+        height: 342
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 117ece605d45543419ceafecbcddd68f
+      internalID: -2863300723612390747
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GenericMachineSpriteSheet_19
+      rect:
+        serializedVersion: 2
+        x: 565
+        y: 27
+        width: 444
+        height: 348
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c55ef8f4f4d925c42a63d86e65f0738e
+      internalID: 440056347362280607
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GenericMachineSpriteSheet_20
+      rect:
+        serializedVersion: 2
+        x: 1086
+        y: 27
+        width: 443
+        height: 344
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6deeb0c44359c34459ac4a031e2f0086
+      internalID: -3985928460641058367
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

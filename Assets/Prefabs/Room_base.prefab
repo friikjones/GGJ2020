@@ -53,7 +53,15 @@ MonoBehaviour:
   - {fileID: 2100000, guid: 572f0632c8adecc4dac991a451d324c9, type: 2}
   completed: 0
   failed: 0
-  machine: {fileID: 4534331656450300522, guid: f28f3aa5f73bd08449b76266fecc82cb, type: 3}
+  machines:
+  - {fileID: 4534331656450300522, guid: 1c769a4ba9fbb0b40b9b95c4f7d3dc2b, type: 3}
+  - {fileID: 4534331656450300522, guid: 59756ca92e46f1043bb4d12b4990931d, type: 3}
+  - {fileID: 4534331656450300522, guid: 305c1142e7d2ba542a46d98d3a6b15be, type: 3}
+  - {fileID: 4534331656450300522, guid: e0148e79ad04df144bb4cfe7364ac455, type: 3}
+  - {fileID: 4534331656450300522, guid: 9fb70b9607672db41ac85a2fd0652c39, type: 3}
+  - {fileID: 4534331656450300522, guid: 9fb94e8969e593f429f53ce96c673a22, type: 3}
+  - {fileID: 4534331656450300522, guid: f28f3aa5f73bd08449b76266fecc82cb, type: 3}
+  machineInstance: {fileID: 0}
 --- !u!1 &3640883978549665167
 GameObject:
   m_ObjectHideFlags: 0

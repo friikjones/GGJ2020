@@ -15,7 +15,7 @@ public class RoomSetupScript : MonoBehaviour
     public bool completed;
     public bool failed;
 
-    public GameObject machine;
+    public GameObject[] machines;
     public GameObject machineInstance;
 
     // Start is called before the first frame update
@@ -24,9 +24,25 @@ public class RoomSetupScript : MonoBehaviour
         // transform.localPosition = new Vector3(gridPosition.x * diff.x + zeroPosition.x, gridPosition.y * diff.y + zeroPosition.y, 0);
         transform.name = "Room_" + gridPosition.x + "_" + gridPosition.y;
         overlayRenderer = transform.Find("Overlay").GetComponent<Renderer>();
-        machineInstance = Instantiate(machine,Vector3.zero,Quaternion.identity);
+
+        if(gridPosition.x == 0 && gridPosition.y == 0){
+            machineInstance = Instantiate(machines[0],Vector3.zero,Quaternion.identity);
+        }else if(gridPosition.x == 1 && gridPosition.y == 1){
+            machineInstance = Instantiate(machines[1],Vector3.zero,Quaternion.identity);
+        }else if(gridPosition.x == 2 && gridPosition.y == 0){
+            machineInstance = Instantiate(machines[2],Vector3.zero,Quaternion.identity);
+        }else if(gridPosition.x == 3 && gridPosition.y == 2){
+            machineInstance = Instantiate(machines[3],Vector3.zero,Quaternion.identity);
+        }else if(gridPosition.x == 3 && gridPosition.y == 1){
+            machineInstance = Instantiate(machines[4],Vector3.zero,Quaternion.identity);
+        }else if(gridPosition.x == 0 && gridPosition.y == 2){
+            machineInstance = Instantiate(machines[5],Vector3.zero,Quaternion.identity);
+        }else{
+            machineInstance = Instantiate(machines[6],Vector3.zero,Quaternion.identity);
+        }
         machineInstance.transform.parent = this.transform;
         machineInstance.transform.localPosition = Vector3.zero;
+        machineInstance.GetComponent<GenericMachine>().isFocused = true;
     }
 
     // Update is called once per frame

@@ -20,6 +20,8 @@ public class GenericMachine : MonoBehaviour
     public int damageCounter;
     public float dormantTimer;
 
+    public bool isFocused;
+
     public enum State
     {
         Active,
@@ -33,7 +35,7 @@ public class GenericMachine : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        tools = this.GetComponent<ToolWheel>();
+        tools = GameObject.Find("/GameManager").GetComponent<ToolWheel>();
         
         setVariables(); 
     }
@@ -124,7 +126,9 @@ public class GenericMachine : MonoBehaviour
         else if ((hp > 0 && hp < 100) && isDormant == false)
         {
             _state = State.Damaged;
-            MouseCheck();
+            if(isFocused){
+                MouseCheck();
+            }
             isActive = false;
             isDead = false;
             setDamageCounter();
