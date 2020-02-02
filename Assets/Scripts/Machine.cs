@@ -19,7 +19,6 @@ public class Machine : MonoBehaviour
     public bool isDormant;
     public int damageCounter;
     public float dormantTimer;
-    public float wakeUpTime;
 
     public enum State
     {
@@ -67,8 +66,7 @@ public class Machine : MonoBehaviour
     void setVariables()
     {
         selectTool();
-        wakeUpTime = Random.Range(0f, 10f);
-        dormantTimer = 25f;
+        dormantTimer = 10f;
         hp = 95;
         _state = State.Dormant;
         isDormant = true;
@@ -127,6 +125,7 @@ public class Machine : MonoBehaviour
         {
             _state = State.Active;
             hp = maxHp;
+            damageCounter = 0;
             isActive = true;
             isDead = false;
         }
@@ -172,10 +171,10 @@ public class Machine : MonoBehaviour
 
     void wakeUpMachine()
     {
-        if (dormantTimer < wakeUpTime)
+        if (dormantTimer <= 0)
         {
-            _state = State.Damaged;
             isDormant = false;
+            dormantTimer = 0f;
         }
     }
 }
