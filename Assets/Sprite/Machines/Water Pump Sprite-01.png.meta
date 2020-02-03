@@ -1,0 +1,391 @@
+fileFormatVersion: 2
+guid: e76bf33f4fc45b743b81af6b20dd61f5
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 6784567817421264367
+    second: Water Pump Sprite-01_0
+  - first:
+      213: 288277301255681186
+    second: Water Pump Sprite-01_1
+  - first:
+      213: 121185303816697312
+    second: Water Pump Sprite-01_2
+  - first:
+      213: 813975356156898971
+    second: Water Pump Sprite-01_3
+  - first:
+      213: 2340681654649150055
+    second: Water Pump Sprite-01_4
+  - first:
+      213: -1084939147947495191
+    second: Water Pump Sprite-01_5
+  - first:
+      213: 6831015326801271419
+    second: Water Pump Sprite-01_6
+  - first:
+      213: -5447707419870507325
+    second: Water Pump Sprite-01_7
+  - first:
+      213: 429107844485750759
+    second: Water Pump Sprite-01_8
+  - first:
+      213: -94199709196017148
+    second: Water Pump Sprite-01_9
+  - first:
+      213: 2745266418723082894
+    second: Water Pump Sprite-01_10
+  externalObjects: {}
+  serializedVersion: 10
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: -1
+    aniso: -1
+    mipBias: -100
+    wrapU: 1
+    wrapV: 1
+    wrapW: -1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Water Pump Sprite-01_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 818.6666
+        width: 520.25
+        height: 409.33334
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 68609116accf00e458a45d84722b08f6
+      internalID: 6784567817421264367
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Water Pump Sprite-01_1
+      rect:
+        serializedVersion: 2
+        x: 520
+        y: 818.6666
+        width: 520.25
+        height: 409.33334
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 997af3227f91d64489ed9cf92ba4b158
+      internalID: 288277301255681186
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Water Pump Sprite-01_2
+      rect:
+        serializedVersion: 2
+        x: 1040
+        y: 818.6666
+        width: 520.25
+        height: 409.33334
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d83963af8e218074487fec34b6d5e20d
+      internalID: 121185303816697312
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Water Pump Sprite-01_3
+      rect:
+        serializedVersion: 2
+        x: 1560
+        y: 818.6666
+        width: 520.25
+        height: 409.33334
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: eb9a59ec85db2d94bba29394f3a1a6a9
+      internalID: 813975356156898971
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Water Pump Sprite-01_4
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 409.66666
+        width: 520.25
+        height: 409.33334
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2af0884b283999342947e6dcafbcd7c7
+      internalID: 2340681654649150055
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Water Pump Sprite-01_5
+      rect:
+        serializedVersion: 2
+        x: 520
+        y: 409.66666
+        width: 520.25
+        height: 409.33334
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f5a7085f86b136f448126a3e8eac2a62
+      internalID: -1084939147947495191
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Water Pump Sprite-01_6
+      rect:
+        serializedVersion: 2
+        x: 1040
+        y: 409.66666
+        width: 520.25
+        height: 409.33334
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bdf410fed9f598c4db8ecf04fcfc7dff
+      internalID: 6831015326801271419
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Water Pump Sprite-01_7
+      rect:
+        serializedVersion: 2
+        x: 1560
+        y: 409.66666
+        width: 520.25
+        height: 409.33334
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5f51b9ea60148aa409fbb4cfa1c766ee
+      internalID: -5447707419870507325
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Water Pump Sprite-01_8
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0.6666565
+        width: 520.25
+        height: 409.33334
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4871fad693294414fb8a50d554bd9d31
+      internalID: 429107844485750759
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Water Pump Sprite-01_9
+      rect:
+        serializedVersion: 2
+        x: 520
+        y: 0.6666565
+        width: 520.25
+        height: 409.33334
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: edafc8b7d6f92d74688475ed75477986
+      internalID: -94199709196017148
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Water Pump Sprite-01_10
+      rect:
+        serializedVersion: 2
+        x: 1040
+        y: 0.6666565
+        width: 520.25
+        height: 409.33334
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2fc3ec724e5e742408d66356746d6698
+      internalID: 2745266418723082894
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

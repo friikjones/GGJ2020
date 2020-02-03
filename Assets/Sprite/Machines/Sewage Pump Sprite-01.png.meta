@@ -1,0 +1,391 @@
+fileFormatVersion: 2
+guid: b0dd70f6605a08349b9ea04122940543
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 8685912065108231194
+    second: Sewage Pump Sprite-01_0
+  - first:
+      213: 1438936003502939635
+    second: Sewage Pump Sprite-01_1
+  - first:
+      213: -612620537284230375
+    second: Sewage Pump Sprite-01_2
+  - first:
+      213: 8854745196629828151
+    second: Sewage Pump Sprite-01_3
+  - first:
+      213: -3881190962567873786
+    second: Sewage Pump Sprite-01_4
+  - first:
+      213: -9208829081413511072
+    second: Sewage Pump Sprite-01_5
+  - first:
+      213: -7504140500180881111
+    second: Sewage Pump Sprite-01_6
+  - first:
+      213: 8577479349134503423
+    second: Sewage Pump Sprite-01_7
+  - first:
+      213: -4210276860102340245
+    second: Sewage Pump Sprite-01_8
+  - first:
+      213: -681000892710116739
+    second: Sewage Pump Sprite-01_9
+  - first:
+      213: -7769174577407830900
+    second: Sewage Pump Sprite-01_10
+  externalObjects: {}
+  serializedVersion: 10
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: -1
+    aniso: -1
+    mipBias: -100
+    wrapU: 1
+    wrapV: 1
+    wrapW: -1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Sewage Pump Sprite-01_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 818.6666
+        width: 520
+        height: 409.33334
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f679167fde0bfd342841baa98a1ba982
+      internalID: 8685912065108231194
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sewage Pump Sprite-01_1
+      rect:
+        serializedVersion: 2
+        x: 520
+        y: 818.6666
+        width: 520
+        height: 409.33334
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 41b8912a67c4e5645a4685fd8974de58
+      internalID: 1438936003502939635
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sewage Pump Sprite-01_2
+      rect:
+        serializedVersion: 2
+        x: 1040
+        y: 818.6666
+        width: 520
+        height: 409.33334
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 379eb6d801638f346924f7483878cdda
+      internalID: -612620537284230375
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sewage Pump Sprite-01_3
+      rect:
+        serializedVersion: 2
+        x: 1560
+        y: 818.6666
+        width: 520
+        height: 409.33334
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e5a2d888078efbe4c9c2ee419ae1392c
+      internalID: 8854745196629828151
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sewage Pump Sprite-01_4
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 409.66666
+        width: 520
+        height: 409.33334
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4f3c08496ab0b1a438890c1ebc794354
+      internalID: -3881190962567873786
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sewage Pump Sprite-01_5
+      rect:
+        serializedVersion: 2
+        x: 520
+        y: 409.66666
+        width: 520
+        height: 409.33334
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2777cef80b2eb04408f835f31300eeca
+      internalID: -9208829081413511072
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sewage Pump Sprite-01_6
+      rect:
+        serializedVersion: 2
+        x: 1040
+        y: 409.66666
+        width: 520
+        height: 409.33334
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 36613980d0295e3458d209adb82ea61d
+      internalID: -7504140500180881111
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sewage Pump Sprite-01_7
+      rect:
+        serializedVersion: 2
+        x: 1560
+        y: 409.66666
+        width: 520
+        height: 409.33334
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ddf563986146f0244b71072e5cca0206
+      internalID: 8577479349134503423
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sewage Pump Sprite-01_8
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0.6666565
+        width: 520
+        height: 409.33334
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bae80a9341dffe44a9559854e7c73536
+      internalID: -4210276860102340245
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sewage Pump Sprite-01_9
+      rect:
+        serializedVersion: 2
+        x: 520
+        y: 0.6666565
+        width: 520
+        height: 409.33334
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: efd45abdc41eb854ea2eaebd7fc19ac8
+      internalID: -681000892710116739
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sewage Pump Sprite-01_10
+      rect:
+        serializedVersion: 2
+        x: 1040
+        y: 0.6666565
+        width: 520
+        height: 409.33334
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c6ae24b333f6d3444abba649c3455bee
+      internalID: -7769174577407830900
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
