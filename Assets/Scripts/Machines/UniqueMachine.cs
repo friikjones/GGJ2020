@@ -39,7 +39,7 @@ public class UniqueMachine : GenericMachine {
 
     public void setVariables () {
         selectTool ();
-        dormantTimer = 10f;
+        dormantTimer = Random.Range(2,12f);
         hp = 95;
         _state = State.Dormant;
         isDormant = true;

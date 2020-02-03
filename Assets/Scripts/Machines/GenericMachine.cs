@@ -61,7 +61,7 @@ public class GenericMachine : MonoBehaviour
     public void setVariables()
     {
         selectTool();
-        dormantTimer = 10f;
+        dormantTimer = Random.Range(0,10f);
         hp = 95;
         _state = State.Dormant;
         isDormant = true;

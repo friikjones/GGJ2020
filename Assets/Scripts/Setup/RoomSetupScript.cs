@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class RoomSetupScript : MonoBehaviour
 {
@@ -19,6 +20,8 @@ public class RoomSetupScript : MonoBehaviour
     public GameObject machineInstance;
     public float diffX = .2f;
     public float diffY = .2f;
+
+    public Text life;
 
     // Start is called before the first frame update
     void Start()
@@ -51,10 +54,8 @@ public class RoomSetupScript : MonoBehaviour
     void Update()
     {
 
-        // if (machineInstance.tag == "Robot")
-        // {
-        //     machineInstance.transform.localPosition = new Vector3(gridPosition.x*diffX,gridPosition.y*diffY,-.1f);
-        // }
+        life.text = GetComponentInChildren<GenericMachine>().hp.ToString();
+
         if(failed){
             overlayRenderer.material = overlayMat[1];
             overlayRenderer.enabled = true;

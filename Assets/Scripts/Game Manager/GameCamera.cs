@@ -8,6 +8,7 @@ public class GameCamera : MonoBehaviour
 
     public Vector3 cameraOffset;
     public float roomTransitionDuration;
+    public Transform lastTarget;
 
     [HideInInspector]
     float tweenToLookAtDuration;
@@ -36,6 +37,8 @@ public class GameCamera : MonoBehaviour
 
     IEnumerator ZoomInRoomAsync(Transform target){
         float timeCount = 0f;
+        lastTarget = target;
+        target.GetComponentInChildren<GenericMachine>().isFocused = true;
         Quaternion originalRotation = target.rotation;
         Quaternion lookAtRotation;
         while(timeCount < roomTransitionDuration){
@@ -60,6 +63,7 @@ public class GameCamera : MonoBehaviour
     IEnumerator ZoomOutRoomAsync(){
         float timeCount = 0f;
         Quaternion originalRotation = Quaternion.identity;
+        lastTarget.GetComponentInChildren<GenericMachine>().isFocused = false;
         while(timeCount < roomTransitionDuration){
             Quaternion lookAtRotation = Quaternion.LookRotation(Vector3.forward);
             transform.rotation = Quaternion.Lerp(originalRotation, lookAtRotation, timeCount/tweenToLookAtDuration);
