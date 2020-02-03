@@ -51,10 +51,10 @@ public class RoomSetupScript : MonoBehaviour
     void Update()
     {
 
-        if (machineInstance.tag == "Robot")
-        {
-            machineInstance.transform.localPosition = new Vector3(gridPosition.x*diffX,gridPosition.y*diffY,-.1f);
-        }
+        // if (machineInstance.tag == "Robot")
+        // {
+        //     machineInstance.transform.localPosition = new Vector3(gridPosition.x*diffX,gridPosition.y*diffY,-.1f);
+        // }
         if(failed){
             overlayRenderer.material = overlayMat[1];
             overlayRenderer.enabled = true;

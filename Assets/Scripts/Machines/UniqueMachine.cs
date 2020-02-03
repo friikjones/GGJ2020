@@ -8,9 +8,7 @@ public class UniqueMachine : GenericMachine {
     public GameObject OutofpowerOverlay;
 
     public bool colateralDone;
-    public float robotTimer;
-    public float gridPosX;
-    public float gridPosY;
+    // public float robotTimer;
 
     // Start is called before the first frame update
     void Start () {
@@ -31,7 +29,7 @@ public class UniqueMachine : GenericMachine {
     void FixedUpdate () {
         timerCount += Time.deltaTime;
         dormantTimer -= Time.deltaTime;
-        robotTimer += Time.deltaTime;
+        // robotTimer += Time.deltaTime;
 
         wakeUpMachine ();
         doDamage ();
@@ -63,23 +61,42 @@ public class UniqueMachine : GenericMachine {
                 gameManager.roomBoard[2, 1].GetComponentInChildren<GenericMachine> ().hp -= 25;
                 gameManager.roomBoard[1, 0].GetComponentInChildren<GenericMachine> ().hp -= 25;
             }
-        } else if (damageCounter > 3 && this.tag == "Robot") {
-            if (robotTimer > 5f) {
-                robotTimer = 0f;
-                int targetX = Random.Range (0, 3);
-                int targetY = Random.Range (0, 2);
-                roomSetup.gridPosition.x = targetX;
-                roomSetup.gridPosition.y = targetY;
-            }
-        } else if (damageCounter > 4 && this.tag == "Generator") {
+        }
+        /*else if (damageCounter > 3 && this.tag == "Robot") {
+               //     if (robotTimer > 5f) {
+               //         robotTimer = 0f;
+               //         int targetX = Random.Range (0, 3);
+               //         int targetY = Random.Range (0, 2);
+               //         roomSetup.gridPosition.x = targetX;
+               //         roomSetup.gridPosition.y = targetY;
+               //     }
+               }*/
+        else if (damageCounter > 4 && colateralDone == false && this.tag == "Generator") {
+            colateralDone = true;
             OutofpowerOverlay.SetActive (true);
-            if (damageCounter <= 2) {
-                OutofpowerOverlay.SetActive (false);
-            }
-        } else if (damageCounter > 3 && this.tag == "ElevatorControl") {
+        } else if (damageCounter <= 2 && colateralDone == true && this.tag == "Generator") {
+            colateralDone = false;
+            OutofpowerOverlay.SetActive (false);
+        } else if (damageCounter > 3 && colateralDone == false && this.tag == "ElevatorControl") {
+            colateralDone = true;
             GameObject.Find ("/Map/Main Camera").GetComponent<GameCamera> ().roomTransitionDuration = 4;
-            if (damageCounter <= 2) {
-                GameObject.Find ("/Map/Main Camera").GetComponent<GameCamera> ().roomTransitionDuration = 1;
+        } else if (damageCounter <= 2 && colateralDone == true && this.tag == "ElevatorControl") {
+            colateralDone = false;
+            GameObject.Find ("/Map/Main Camera").GetComponent<GameCamera> ().roomTransitionDuration = 1;
+        } else if (hp < 30 && colateralDone == false && this.tag == "CCTV") {
+            colateralDone = true;
+            for (int i = 0; i < gameManager.roomBoard.GetLength (0); i++) {
+                for (int j = 0; j < gameManager.roomBoard.GetLength (1); j++) {
+                    gameManager.roomBoard[i, j].transform.Find ("Overlay").GetComponent<Renderer> ().enabled = true;
+                    gameManager.roomBoard[i, j].transform.Find ("Overlay").GetComponent<Renderer> ().material = gameManager.roomBoard[i, j].GetComponent<RoomSetupScript> ().overlayMat[2];
+                }
+            }
+        } else if (hp >= 30 && colateralDone == true && this.tag == "CCTV") {
+            colateralDone = false;
+            for (int i = 0; i < gameManager.roomBoard.GetLength (0); i++) {
+                for (int j = 0; j < gameManager.roomBoard.GetLength (1); j++) {
+                    gameManager.roomBoard[i, j].transform.Find ("Overlay").GetComponent<Renderer> ().enabled = false;
+                }
             }
         }
     }
