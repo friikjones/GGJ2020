@@ -108,15 +108,10 @@ public class GameManagerScript : MonoBehaviour
 
     public void CheckEnd(){
         int machinesSaved = 0;
-        Debug.Log("FUCK 0 "+roomBoard.GetLength(0).ToString());
-        Debug.Log("FUCK 1 "+roomBoard.GetLength(1).ToString());
         for (int i = 0; i < roomBoard.GetLength(0); i++){
-            Debug.Log("i="+i.ToString());
             for (int j = 0; j < roomBoard.GetLength(1); j++){
-                Debug.Log("j="+j.ToString());
                 GameObject machineGameObject = roomBoard[i,j].GetComponent<RoomSetupScript>().machineInstance;
                 GenericMachine machine = machineGameObject.GetComponent<GenericMachine>();
-                Debug.Log(machineGameObject.name+" => "+machine.isActive.ToString()+" , "+machine.isDead.ToString());
                 if (machine.isActive){
                     machinesSaved++;
                 }else if (!machine.isDead){

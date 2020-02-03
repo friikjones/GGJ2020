@@ -14,7 +14,7 @@ public class ExitButton : MonoBehaviour
     void Start()
     {
         originalPosition = transform.position;
-        hidingPosition = transform.position + new Vector3(+100,0,0);
+        hidingPosition = transform.position + new Vector3(+130,0,0);
         transform.position = hidingPosition;
     }
 
